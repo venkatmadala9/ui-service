@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ui-service'`, () => {
+  it(`should have as title 'LodgingUI'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ui-service');
+    expect(app.title).toEqual('LodgingUI');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ui-service app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('LodgingUI app is running!');
   });
 });

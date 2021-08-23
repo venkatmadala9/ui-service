@@ -1,0 +1,37 @@
+<ul class="hotels">
+  <li *ngFor="let p of hotelsList; let i = index;">
+    <span>
+      <strong (click)="getDetails(p.oid)">
+        <span class="link-css">{{i+1}} {{p.name}}</span>
+      </strong>
+    </span>
+    <button class="delete" title="delete product" (click)="deleteHotel(p.oid)">x</button>
+  </li>
+</ul>
+
+<div *ngIf="hotel" class="hotels">
+  <h2>{{hotel.name}} Details</h2>
+  <div><span>Id: </span>{{hotel.oid}}</div>
+
+  <div><span>Facility Code: </span>{{hotel.facilityCode}}</div>
+  <div><span>Hotel Number: </span>{{hotel.hotelNumber}}</div>
+  <div><span>Hotel Rooms: </span>{{hotel.hotelRooms}}</div>
+
+  <!--  <div><span>Address: </span></div>
+    <div><span>Street: </span>{{hotel.Address.street}}</div>
+    <div><span>City: </span>{{hotel.address.city}}</div>
+    <div><span>State: </span>{{hotel.address.state}}</div>
+    <div><span>zipcode: </span>{{hotel.address.zipcode}}</div> -->
+
+  <div>
+    <button routerLink="/hotel/add">
+      Add New Hotel
+    </button>
+  </div>
+
+  <div>
+    <button routerLink="/hotel">
+      Go back to List
+    </button>
+  </div>
+</div>

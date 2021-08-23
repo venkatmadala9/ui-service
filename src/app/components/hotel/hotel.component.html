@@ -1,0 +1,17 @@
+<h2>Hotel List</h2>
+
+<div class="row" *ngIf="addSucess">
+  <div class="col-xs-12">
+    <p class="alert alert-success">
+      <strong>Successfully Created Hotel!</strong>
+    </p>
+  </div>
+</div>
+
+<div>
+  <button (click)="hotelAction('add')">Add</button>
+</div>
+
+
+<!-- <create-hotel *ngIf="createHotel" (add)="addHotel($event)"></create-hotel> -->
+<!-- <hotel-details *ngIf="hotels.length" [hotelsList]="hotels" (delete)="delete($event)"></hotel-details> -->

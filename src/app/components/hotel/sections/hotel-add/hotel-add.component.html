@@ -1,0 +1,47 @@
+<p>hotel-add works!</p>
+<div>
+    <h2>Hotel Add</h2>
+    <form [formGroup]="hotelForm">
+        <div>
+            <label>Hotel Name:
+                <input id="name" type="text" formControlName="name" placeholder="Hotel Name" />
+            </label> <br>
+
+            <label>Hotel Rooms:
+                <input id="hotelRooms" type="number" formControlName="hotelRooms" placeholder="Hotel Rooms" />
+            </label> <br>
+            <label>Hotel Number:
+                <input id="hotelNumber" type="number" formControlName="hotelNumber" placeholder="Hotel Number" />
+            </label> <br>
+            <label>Hotel facilityCode:
+                <input id="facilityCode" type="text" formControlName="facilityCode" placeholder="Facility Code" />
+            </label> <br>
+        </div>
+        <div formGroupName="address">
+            <h2>Address</h2>
+
+            <label for="street">Street: </label>
+            <input id="street" type="text" formControlName="street"><br>
+
+            <label for="city">City: </label>
+            <input id="city" type="text" formControlName="city"><br>
+
+            <label for="state">State: </label>
+            <input id="state" type="text" formControlName="state"><br>
+
+            <label for="zipcode">Zip Code: </label>
+            <input id="zipcode" type="text" formControlName="zipcode"><br>
+        </div>
+        <p>Complete the form to enable button.</p>
+        <button class="button" (click)="onSubmit()">
+            Save
+        </button>
+
+        <div>
+            <button routerLink="/hotel/all">
+                cancel
+            </button>
+        </div>
+
+    </form>
+</div>
